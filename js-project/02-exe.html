@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Execise work || 012</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+  <button class="js-button">click </button>
+
+  <br>
+  <br>
+
+  <button class="js-button-add">Add cart</button>
+
+  <p class="para"></p>
+
+  
+  <button class="js-button-add-im">Add cart</button>
+
+  <p class="para-im"></p>
+  <script>
+
+document.querySelector('.js-button').addEventListener('click', () => {
+ let get = document.querySelector('.js-button');
+
+  get.innerHTML = 'loading!....';
+
+    setTimeout(() => {
+    get.innerHTML = 'work boy';
+    }, 1500);
+    }
+  );
+
+  document.querySelector('.js-button-add').addEventListener('click', () => {
+   let paragraph = document.querySelector('.para');
+
+   paragraph.innerHTML = 'added';
+
+   setTimeout(() => {
+    paragraph.innerHTML = '';
+   }, 2000);
+
+  });
+
+
+
+let intervalId;
+
+document.querySelector('.js-button-add-im').addEventListener('click', () => {
+   let paragraph = document.querySelector('.para-im');
+
+   paragraph.innerHTML = 'added';
+
+   clearInterval(intervalId);
+
+  intervalId = setTimeout(() => {
+    paragraph.innerHTML = '';
+   }, 2000);
+
+  });
+
+  
+
+
+  </script>
+</body>
+</html>

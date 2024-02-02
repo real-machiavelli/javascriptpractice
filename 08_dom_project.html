@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript || work</title>
+</head>
+<body>
+ 
+<p>YouTube subscribe button</p>
+
+<button onclick="
+  subscribe();
+" class="js-scribe">subscribe</button>
+
+<p>Amazon shipping store </p>
+
+<input type="text" placeholder="enter a number" class="js-input"
+onkeydown="
+calonkeydown(event);
+">
+<button onclick="
+calculator();
+">calculators</button>
+
+<p class="js-calcu"></p>
+
+  <script>
+    function calonkeydown(event){
+      if (event.key === 'Enter'){
+        calculator();
+      }
+    }
+
+    function calculator() {
+     const getEle = document.querySelector('.js-input');
+
+     let cost = Number(getEle.value);
+
+      if (cost < 40 ){
+        cost = cost + 15 ;
+
+      }
+    
+      document.querySelector('.js-calcu').innerHTML = `$${cost}`;
+    }
+
+
+    function subscribe() {
+   const getButton = document.querySelector('.js-scribe');
+
+    if (getButton.innerText === 'subscribe' ){
+    getButton.innerHTML = 'subscribed';
+    } else {
+    getButton.innerHTML = 'subscribe';
+    }
+
+    }
+
+
+  </script>
+
+
+</body>
+</html>
